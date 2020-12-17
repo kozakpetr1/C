@@ -15,6 +15,6 @@ int main() {
         printf("Chceš opakovat výpočet? [a/n] ");
         getMyChar(&znak);
     }
-    printf("\Pápá!");
+    printf("Pápá!");
     return (EXIT_SUCCESS);
 }

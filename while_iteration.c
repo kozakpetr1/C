@@ -4,8 +4,8 @@
 int main() {
     char znak = 'a';
     while (znak != 'n') {
-        printf("Počítám ...\n");
-        printf("Chceš opakovat výpočet? [a/n] ");
+        printf("Pocitam ...\n");
+        printf("Chces opakovat vypocet? [a/n] ");
         do {
             znak = (char) getchar();
         } while (znak == '\n');
