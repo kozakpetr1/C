@@ -3,6 +3,7 @@
 
 int main() {
     int hound_age, human_age;
+
     printf("Porovnani stari psa a cloveka\n-----------------------------\nZadej stari psa: ");
     scanf("%d", &hound_age);
 
