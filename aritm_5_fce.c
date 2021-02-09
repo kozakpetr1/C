@@ -22,7 +22,6 @@ int main() {
         prom_a = nacti();
         prom_b = nacti();
         porovnani(prom_a, prom_b);
-        porovnani(15.5, 27.1);
 
         printf("\nChces znovu porovnavat? [a/n] ");
 
