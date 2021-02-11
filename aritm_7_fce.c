@@ -37,7 +37,7 @@ double getValue() {
 char doItAgain() {
     char local_var;
 
-    printf("\nChces znovu porovnavat? [a/n] ");
+    printf("\nChces opakovat? [a/n] ");
     do {
         local_var = (char) getchar();
     } while (local_var == '\n');
@@ -46,7 +46,7 @@ char doItAgain() {
 
 /*
  * Function: void headerInfo()
- * Descpription: Funkce vycisti konzoli a uvodni info.
+ * Descpription: Funkce vycisti konzoli a zobrazi uvodni info.
  */
 void headerInfo() {
     system("cls");
