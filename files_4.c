@@ -15,11 +15,15 @@ int main(int argc, char *argv[], char **envp)  {
 
     FILE *fr, *fw;
     char znak;
+    int i;
 
     if (argc != 3) { 
         printf("Chybny pocet argumentu.\nPRIKAZ arg1 arg2\narg1 ... zdrojovy soubor\narg2 ... cilovy soubor.\n");
         return(-1);
     }
+
+    for(i = 0; i < argc; i++)
+        printf( "  argv[%d]   %s\n", i, argv[i] );
 
     // otevreni souboru pro cteni
     fr = fopen(argv[1], CTENI);
