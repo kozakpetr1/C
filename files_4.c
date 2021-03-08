@@ -16,6 +16,11 @@ int main(int argc, char *argv[], char **envp)  {
     FILE *fr, *fw;
     char znak;
 
+    if (argc != 3) { 
+        printf("Chybny pocet argumentu.\nPRIKAZ arg1 arg2\narg1 ... zdrojovy soubor\narg2 ... cilovy soubor.\n");
+        return(-1);
+    }
+
     // otevreni souboru pro cteni
     fr = fopen(argv[1], CTENI);
 
@@ -34,6 +39,8 @@ int main(int argc, char *argv[], char **envp)  {
         return(-1);
     }
 
+    printf("Kopiruji ze souboru %s do souboru %s.\n", argv[1], argv[2]);
+
     // cteni ze souboru a zapis po znacich do souboru
     znak = (char) fgetc(fr);
     while (!feof(fr)) {
@@ -45,5 +52,6 @@ int main(int argc, char *argv[], char **envp)  {
     fclose(fr);
     fclose(fw);
  
+    printf("Kopirovani probehlo uspesne.\n");
     return (0);
 }
