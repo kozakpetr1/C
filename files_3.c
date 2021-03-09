@@ -1,7 +1,7 @@
 /* 
  * File:   files_3.c
  * Author: petr.kozak
- * Description: Manipulace se soubory
+ * Description: Zobrazeni obsahu souboru
  * 
  * Created on 8. brezna 2021, 8:10
  */

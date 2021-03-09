@@ -29,7 +29,7 @@ int main(int argc, char *argv[], char **envp)  {
     fr = fopen(argv[1], CTENI);
 
     // osetreni chyby pri otevirani souboru
-    if (fr == NULL) {
+    if (fr == NULL) { 
         printf("Zdrojovy soubor %s nelze otevrit.\n", argv[1]);
         return(-1);
     }
@@ -49,7 +49,9 @@ int main(int argc, char *argv[], char **envp)  {
     znak = (char) fgetc(fr);
     while (!feof(fr)) {
         fputc(znak, fw);
+        // zde muze byt pouzita funkce ferror(fw) a clearerr(fw)
         znak = (char) fgetc(fr);
+        // zde muze byt pouzita funkce ferror(fr) a clearerr(fr)
     }
 
     // uzaverni souboru
