@@ -13,17 +13,18 @@
 char doItAgain() {
     char local_var;
 
-    printf("\nChces opakovat? [a/n] ");
+    printf("\nDalsi radek? [a/n] ");
     do {
         local_var = (char) getchar();
     } while (local_var == '\n');
+    fflush(stdin);
     return local_var;
 }
 
 int main(int argc, char *argv[], char **envp)  {
 
     FILE *fw;
-    char *text;
+    char text[51];
     char opakovani;
 
 
@@ -36,11 +37,12 @@ int main(int argc, char *argv[], char **envp)  {
         return(-1);
     }
 
-    printf("Zapis retezce do souboru.\n-----------------\nZadej retezec:");
+    printf("Zapis retezce do souboru.\n---------------------------\n");
     while (opakovani != 'n') {
         printf("Zadej retezec:");
-        scanf("%s", text);
-        fprintf(fw, text);
+        scanf("%50[^\n]s", text);
+        fprintf(fw, "%s\n", text);
+        fflush(stdin);
         opakovani = doItAgain();
     }
 
