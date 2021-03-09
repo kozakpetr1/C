@@ -22,7 +22,7 @@ int main() {
     if (fr == NULL) {
         printf("Soubor nelze otevrit.\n");
         return(-1);
-   }
+    }
     // cteni ze souboru a zobrazeni po znacich
     znak = (char) fgetc(fr);
     while (!feof(fr)) {
