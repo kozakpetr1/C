@@ -23,7 +23,7 @@ int main(int argc, char *argv[], char **envp)  {
     }
 
     for(i = 0; i < argc; i++)
-        printf( "  argv[%d]   %s\n", i, argv[i] );
+        printf("  argv[%d]   %s\n", i, argv[i]);
 
     // otevreni souboru pro cteni
     fr = fopen(argv[1], CTENI);
@@ -47,7 +47,7 @@ int main(int argc, char *argv[], char **envp)  {
 
     // cteni ze souboru a zapis po znacich do souboru
     znak = (char) fgetc(fr);
-    while (!feof(fr)) {
+    while (!feof(fr)) { // dokud neni konec souboru
         fputc(znak, fw);
         // zde muze byt pouzita funkce ferror(fw) a clearerr(fw)
         znak = (char) fgetc(fr);
