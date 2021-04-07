@@ -1,7 +1,7 @@
 /* 
  * File:   bubble_sort.c
  * Author: petr.kozak
- * Description: Bubble Sort
+ * Description: Bubble Sort - vzestupne nebo sestupne trideni hodnot pole
  * 
  * Created on 7. dubna 2021
  * 
@@ -53,7 +53,7 @@ int main(int argc, char *argv[], char **envp)  {
 
 /* Vypis hodnot pole */
     for(i = 0; i < ARRCNT; i++) {
-        printf("%d ", arrayOfNums[i]);
+        printf("%3d ", arrayOfNums[i]);
     }
     printf("\n");
 
@@ -75,7 +75,7 @@ int main(int argc, char *argv[], char **envp)  {
 
 /* Vypis hodnot pole */
     for(i = 0; i < ARRCNT; i++) {
-        printf("%d ", arrayOfNums[i]);
+        printf("%3d ", arrayOfNums[i]);
     }
     printf("\n");
 
