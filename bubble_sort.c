@@ -16,7 +16,7 @@
 #include <string.h>
 #include <time.h>
 
-#define ARRCNT      20      // pocet prvku pole
+#define ARRCNT      15      // pocet prvku pole
 #define VALRANGE    100     // rozsah hodnot prvku od 1 do VALRANGE
 #define SWAPASC     1       // vzestupne probublavani
 #define SWAPDESC    1       // sestupne probublavani
@@ -36,6 +36,8 @@ int main(int argc, char *argv[], char **envp)  {
     int arrayOfNums[ARRCNT];
     time_t iTime;
 
+    system("cls");
+    printf("\nBUBBLE SORT ALGORITHM\n---------------------\n");
 /*
  * Zjisteni hodnoty parametru a nasteveni smeru trideni.
  * Je-li hodnota parametru rovna "d", provede se trideni
@@ -45,15 +47,26 @@ int main(int argc, char *argv[], char **envp)  {
         order = (strcmp(argv[1], "d") == 0) ? 'd' : 'a';
     }
 
+    if (order == 'a')
+        printf("You asked me to sort a random array in ASCENDING order.\n\n");
+    else
+        printf("You asked me to sort a random array in DESCENDING order.\n\n");
 /* Vlozeni pseudonahodnych cisel o rozsahu 1..VALRANGE do pole o ARRNCT prvcich. */
     srand((unsigned) time(&iTime));
     for(i = 0; i < ARRCNT; i++) {
         arrayOfNums[i] = rand() % VALRANGE + 1;
     }
 
+/* Vypis hodnot indexu */
+    printf("  INDEX|");
+    for(i = 0; i < ARRCNT; i++) printf("%3d|", i); printf("\n");
+    printf("-------|");
+    for(i = 0; i < ARRCNT; i++) printf("---|"); printf("\n");
+
 /* Vypis hodnot pole */
+    printf(" RANDOM|");
     for(i = 0; i < ARRCNT; i++) {
-        printf("%3d ", arrayOfNums[i]);
+        printf("%3d|", arrayOfNums[i]);
     }
     printf("\n");
 
@@ -74,10 +87,11 @@ int main(int argc, char *argv[], char **envp)  {
     }
 
 /* Vypis hodnot pole */
+    printf(" SORTED|");
     for(i = 0; i < ARRCNT; i++) {
-        printf("%3d ", arrayOfNums[i]);
+        printf("%3d|", arrayOfNums[i]);
     }
-    printf("\n");
+    printf("\n\n");
 
     return 0;
 }
