@@ -42,9 +42,7 @@ int main(int argc, char *argv[], char **envp)  {
  * pole sestupne, jinak vzestupne.
  */
     if (argc == 2) {
-        printf("%s", argv[1]);
         order = (strcmp(argv[1], "d") == 0) ? 'd' : 'a';
-        printf("%c", order);
     }
 
 /* Vlozeni pseudonahodnych cisel o rozsahu 1..VALRANGE do pole o ARRNCT prvcich. */
