@@ -67,14 +67,12 @@ int main(int argc, char *argv[], char **envp)  {
         for (j = 0 ; j < ARRCNT - i - 1; j++) {
             swapNumsAsc = (order == 'a' && arrayOfNums[j] > arrayOfNums[j + 1]) ? SWAPASC : NOSWAP;   
             swapNumsDesc = (order == 'd' && arrayOfNums[j] < arrayOfNums[j + 1]) ? SWAPDESC : NOSWAP;
-//          printf("%d ", swapNumsAsc);
             if (swapNumsAsc == 1 || swapNumsDesc == 1) {
                 swap = arrayOfNums[j];
                 arrayOfNums[j] = arrayOfNums[j + 1];
                 arrayOfNums[j + 1] = swap;
             }
         }
-//      printf("\n");
     }
 
 /* Vypis hodnot pole */

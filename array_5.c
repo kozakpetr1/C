@@ -1,7 +1,7 @@
 /* 
  * File:   array_5.c
  * Author: petr.kozak
- * Description: Pocet prvku v poli
+ * Description: Velikost pole
  * 
  * Created on 6. dubna 2021
  * .\sizeofarray.exe
