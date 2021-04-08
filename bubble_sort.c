@@ -24,11 +24,11 @@
 
 int main(int argc, char *argv[], char **envp)  {
 /*
- * i, j         iteratory
+ * i, j         iteratory (pocitadla v cyklech)
  * swap         pomocna promenna pro probublavani
  * swapNumsAsc  SWAPASC = probublat vzestupne, NOSWAP = neprobublavat
- * swapNUmsDesc SWAPDESC = probublat sestupne, NOSWAP = neprobublavat
- * order        "a" = vzestupne trideni, "d" = sestupne trideni
+ * swapNumsDesc SWAPDESC = probublat sestupne, NOSWAP = neprobublavat
+ * order        'a' = vzestupne trideni, 'd' = sestupne trideni
  * arrayOfNums  pole hodnot typu int o ARRCNT prvcich
  */
     int i, j, swap, swapNumsAsc = NOSWAP, swapNumsDesc = NOSWAP;
@@ -39,7 +39,7 @@ int main(int argc, char *argv[], char **envp)  {
     system("cls");
     printf("\nBUBBLE SORT ALGORITHM\n---------------------\n");
 /*
- * Zjisteni hodnoty parametru a nasteveni smeru trideni.
+ * Zjisteni hodnoty parametru a nastaveni smeru trideni.
  * Je-li hodnota parametru rovna "d", provede se trideni
  * pole sestupne, jinak vzestupne.
  */
@@ -51,6 +51,7 @@ int main(int argc, char *argv[], char **envp)  {
         printf("You asked me to sort a random array in ASCENDING order.\n\n");
     else
         printf("You asked me to sort a random array in DESCENDING order.\n\n");
+
 /* Vlozeni pseudonahodnych cisel o rozsahu 1..VALRANGE do pole o ARRNCT prvcich. */
     srand((unsigned) time(&iTime));
     for(i = 0; i < ARRCNT; i++) {
